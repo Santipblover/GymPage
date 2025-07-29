@@ -1,0 +1,110 @@
+.home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100dvh - 68.78px);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-image: url('../assets/BackgroundHome.png');
+  background-position: center;
+  animation: fadeIn 1s ease-in forwards;
+  
+
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-section {
+    background-image: url('../assets/BackgroundMobile.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    min-height: calc(100dvh - 68.78px);
+    padding: 16px;
+    background-color: #f1eaea;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+}
+
+.welcome-card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  view-timeline: --image;
+  view-timeline-axis: block;
+  animation-name: show;
+  animation-range: entry 25% cover 30%;
+  animation-timeline: --image;
+  animation-fill-mode: both;
+
+ 
+ 
+
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%
+  }
+  to {
+    opacity: 1;
+    scale: 100%
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+ 
+}
+
+.routine-button {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  view-timeline: --image;
+  view-timeline-axis: block;
+  animation-name: show;
+  animation-range: entry 25% cover 30%;
+  animation-timeline: --image;
+  animation-fill-mode: both;
+}
+
+.routine-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(135deg, #ff5252, #d63031);
+}
+
+.routine-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+}
+
+
+
+
