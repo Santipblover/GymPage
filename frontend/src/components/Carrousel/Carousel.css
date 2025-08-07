@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 700px;
   margin: 0 auto 1.5rem auto;
   position: relative;
 }
@@ -17,15 +16,18 @@
 
 .carousel-image {
   width: 100%;
-  max-width: 700px;
   height: 500px;
-  border-radius: 50px;
-  object-fit: contain;
-  transition: opacity 0.4s;
+  object-fit: cover;
+  transition: opacity 0.2s ease-in-out;
+  border-radius: 12px;
+}
+
+.carousel-image.fade-out {
+  opacity: 0;
 }
 
 .carousel-arrow {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
   border: none;
   font-size: 2rem;
@@ -42,20 +44,26 @@
 
 .carousel-arrow.left {
   position: absolute;
-  left: 10px;
+  left: -60px;
 }
 
 .carousel-arrow.right {
   position: absolute;
-  right: 10px;
+  right: -60px;
 }
 
 @media (max-width: 600px) {
   .carousel-container {
-    max-width: 90vw;
+    width: 100%;
   }
   .carousel-image {
-    max-width: 90vw;
-    height: 35vw;
+    width: 100%;
+    height: 250px;
+  }
+  .carousel-arrow.left {
+    left: 0px;
+  }
+  .carousel-arrow.right {
+    right: 0px;
   }
 } 

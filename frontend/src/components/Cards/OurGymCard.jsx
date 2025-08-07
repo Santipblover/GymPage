@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "../Carousel";
+import Carousel from "../Carrousel/Carousel";
 import SanGymLogo from "../../assets/SanGym.png";
 import OutGym from "../../assets/OutGym.png";
 import IntoGym from "../../assets/IntoGym.png";

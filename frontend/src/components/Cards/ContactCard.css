@@ -1,0 +1,80 @@
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  view-timeline: --image;
+  view-timeline-axis: block;
+  animation-name: show;
+  animation-range: entry 25% cover 30%;
+  animation-timeline: --image;
+  animation-fill-mode: both;
+}
+
+.contact-card__title {
+  margin-bottom: 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card__description {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-align: center;
+  max-width: 500px;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card__whatsapp-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+.contact-card__whatsapp-button:hover {
+  background-color: #1ebe5d;
+  color: #fff;
+}
+
+/* Responsive para mobile */
+@media (max-width: 600px) {
+  .contact-card__title {
+    font-size: 28px;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-card__description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+
+@keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%
+    }
+    to {
+      opacity: 1;
+      scale: 100%
+    }
+  }

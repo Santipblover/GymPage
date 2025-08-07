@@ -1,6 +1,8 @@
 import React from "react";
 import WelcomeCard from "../components/Cards/WelcomeCard";
 import OurGymCard from "../components/Cards/OurGymCard";
+import Footer from "../components/Footer/Footer";
+import ContactCard from "../components/Cards/ContactCard";
 
 import "./Home.css";
 
@@ -21,6 +23,8 @@ function Home() {
       <div className="our-gym-card-container">
         <OurGymCard />
       </div>
+      <ContactCard />
+      <Footer />
     </>
   );
 }
